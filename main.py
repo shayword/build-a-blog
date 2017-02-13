@@ -35,12 +35,9 @@ class Handler(webapp2.RequestHandler):
 
 class BlogPage(Handler):
 	def render_BlogPage(self, title = "", blogtext = ""):
-		blogg = db.GqlQuery("SELECT * FROM Blog ORDER BY CREATED DESC")
+		blog = db.GqlQuery("SELECT * FROM Blog ORDER BY CREATED DESC")
 
-		self.render("BlogPage.html", blogg = blogg, title = title, blogtext = blogtext)
-	def get(self):
-		self.render_BlogPage()
-
+		self.render("BlogPage.html", blog = blog, title = title, blogtext = blogtext)
 	def get(self):
 		self.render_BlogPage()
 		  

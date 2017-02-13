@@ -1,21 +1,21 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <title>Shay's Blog!</title>
-</head>
+    <head>
+        <title>Shay's Blog!</title>
+    </head>
 
-<body>
-    <h1>Shay's Blog!</h1>
-    <hr>
-    {% for b in blogg %}
-    <div class="blog">
-        <div class="blog-title">{{ b.title }}</div>
-        <pre class="blog-body">
-					{{blogg.blogtext}}
+    <body>
+        <h1>Shay's Blog!</h1>
+        <hr>
+         {% for blog in blogs %}
+        <div class="blog">
+            <div class="blog-title">{{ blog.title }}</div>
+            <pre class="blog-body">
+					{{ blog.blogtext }}
 				</pre>
-    </div>
-    {% endfor %}
+        </div>
+        {% endfor %}
 
-</body>
+    </body>
 </html>
