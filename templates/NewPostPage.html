@@ -1,27 +1,22 @@
-﻿<!DOCTYPE <!DOCTYPE html>
+﻿{% extends "base.html" %}
 
-<html>
-    <head>
-        <title>New Post Page</title>
-    </head>
-
-    <body>
+{% block content %}
         <h1>Make a new post!</h1>
 
         <form method="post">
             <label>
-                <div>title</div>
+                <div>Title:</div>
                 <input typeof="text" name="title" value="{{title}}">
             </label>
+            <br />
 
             <label>
-                <div>blogtext</div>
+                <div>Text:</div>
                 <textarea name="blogtext">{{blogtext}}</textarea>
             </label>
 
-            <div class="error">{{error}}</div>
+            <div class="error">{{error}}</div><br />
 
             <input type="submit">
         </form>
-    </body>
-</html>
+{% endblock %}
